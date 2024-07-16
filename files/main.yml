@@ -1,0 +1,10 @@
+- name: create a file
+  file:
+    path: /var/www/html/sample.html
+    state: touch
+- name: add content in a file
+  copy:
+    dest: /var/www/html/sample.html
+    content: |
+      <h1> ANSIBLE ROLE FILE</h1>
+      <h2>OK</h2>
